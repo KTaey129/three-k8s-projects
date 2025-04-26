@@ -20,6 +20,8 @@ module "eks" {
       instance_types   = ["t3.medium"]
     }
   }
+
+  cluster_role_arn = aws_iam_role.eks_cluster_role.arn
 }
 
 module "vpc" {
